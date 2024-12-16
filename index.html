@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+  head is all the information ab the webpage that is not shown to the user
+  main 3 pieces of information to include is: charset. UTF-8 means a character should be between 1-4 bytes. allows you to add emojis to the code and title -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Title is not displayed to the user, it is the name in the tag -->
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width" />
+    <script defer src="index.js"></script>
+    <!-- will load after html ^ -->
+  </head>
+
+  <header aria-label="hero">
+    <div class="grid-wrapper">
+      <h1 tabindex="0">College <span id="pro">Pro</span>cess</h1>
+      <img src="convert.webp" id="logo" />
+      <nav aria-label="navigation-menu">
+        <ul class="navs">
+          <li aria-label="home-button">
+            <a href="/" tabindex="1">Home</a>
+          </li>
+          <li aria-label="external-link-to-collegeboard">
+            <a
+              tabindex="1"
+              href="https://bigfuture.collegeboard.org/?ef_id=CjwKCAiAmfq6BhAsEiwAX1jsZ5SUA0R_jQIjJo7ivNKYah7dyxJzXE1yi0jYnFTxYTCAIfBPmM-9uRoCZrYQAvD_BwE:G:s&s_kwcid=AL!4330!3!581410642292!p!!g!!college%20board%20college%20finder!16155749223!132904559013&gad_source=1&gbraid=0AAAAAD-SkkzWNZ60tvVhTqutTC-oPV-oh&gclid=CjwKCAiAmfq6BhAsEiwAX1jsZ5SUA0R_jQIjJo7ivNKYah7dyxJzXE1yi0jYnFTxYTCAIfBPmM-9uRoCZrYQAvD_BwE"
+              >Colleges</a
+            >
+          </li>
+          <li aria-label="external-link-to-mentorship-program">
+            <a tabindex="2" href="https://matriculate.org">Mentors</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <hr class="divide" />
+
+  <body>
+    <main>
+      <section class="bio" aria-label="college-today" tabindex="3">
+        <h2>College Today</h2>
+        <p>
+          Pursuing higher education can be scary without the right advice and
+          opportunities. This is hub of resources for high-achieving,
+          first-generation and/or low-income (<abbr>FGLI</abbr>) students to
+          receive support throughout the college process.
+        </p>
+      </section>
+
+      <section class="slider" aria-label="resource-carousel">
+        <img src="posse.jpg" alt="Posse Foundation Logo" />
+        <img src="quest.jpg" alt="Questbridge Scholarship Logo" />
+        <img src="thrive.png" alt="Thrive Scholars Logo" />
+        <img src="fullbright.png" alt="Fullbright Scholarship Logo" />
+        <img src="gates.png" alt="Gates Scholarship Logo" />
+
+        <div class="button-container">
+          <button class="prev" onclick="prevSlide()" tabindex="4">
+            &#8656;
+          </button>
+
+          <button class="next" onclick="nextSlide()" tabindex="5">
+            &#8658;
+          </button>
+        </div>
+      </section>
+
+      <section class="newsletter-form" tabindex="6" aria-label="newsletter">
+        <h2>Newsletter</h2>
+        <p>Join our listserv for more information!</p>
+        <form id="newsletter-form" action="submit" tabindex="7">
+          <label for="newsletter-form">Enter email here</label>
+          <input
+            required
+            aria-required="true"
+            name="Email"
+            id="newsletter-form"
+          />
+          <button id="submit-btn" tabindex="8" onclick="formSubmitted()">
+            Submit
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer tabindex="9" aria-label="footer">
+      © 2024 Built and Designed by Soji Oduneye. All rights reserved.
+    </footer>
+  </body>
+</html>

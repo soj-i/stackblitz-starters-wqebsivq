@@ -1,0 +1,142 @@
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  background-color: rgb(207 207 207);
+}
+
+.grid-wrapper {
+  display: grid;
+
+  align-items: baseline; */
+
+  container: wrapper / inline-size;
+}
+
+header {
+
+
+  grid-template-columns: repeat(3, 1fr);
+
+  color: rgb(53, 58, 65);
+
+  margin-left: 10px;
+  margin-right: 10px;
+
+  justify-items: center;
+  grid-column: 1 / 4;
+}
+
+#logo {
+  grid-column: 2;
+}
+
+h1 {
+  font-size: 3em;
+  grid-column: 1;
+  justify-self: start;
+}
+#pro {
+  color: rgb(73, 50, 142);
+}
+
+nav {
+  grid-column: 3;
+  font-size: 1.2em;
+  justify-self: right;
+}
+nav ul {
+  display: grid;
+  grid-template-columns: subgrid;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+nav li {
+  list-style-type: none;
+  margin: 5px;
+}
+
+@container wrapper (max-width: 400px) {
+  header {
+    background-color: black;
+  }
+}
+
+/* header divider */
+hr.divide {
+  width: 100%;
+  border-top: 10px solid rgb(37, 35, 35);
+  border-radius: 30px;
+}
+
+/* stuff under header */
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgb(189, 186, 186);
+}
+
+.bio {
+  flex: 1;
+  word-spacing: 15%;
+  line-height: 2;
+  padding-left: 15px;
+}
+.slider {
+  flex: 1;
+}
+
+.newsletter-form {
+  flex: 1;
+  word-spacing: 15%;
+  line-height: 2;
+  padding-left: 15px;
+}
+
+.button-container {
+  width: 450px;
+  padding-top: 20px;
+
+  /* ensure that the buttons don't swap if used on a smaller screen */
+}
+
+/* button insides */
+button {
+  width: 120px;
+  height: 50px;
+  font-size: 1.5em;
+
+  flex-wrap: nowrap;
+}
+button:hover {
+  font-weight: bold;
+  font-size: 1.4em;
+  outline-style: inset;
+  outline-width: 4px;
+  color: rgb(167, 22, 235);
+}
+.newsletter-form {
+  display: inline-block;
+}
+.slider img {
+  display: none;
+}
+
+img.displaySlide {
+  display: flex;
+  width: 450px;
+  height: 450px;
+}
+
+.prev {
+  margin-right: 45.4%;
+}
+
+form {
+  width: 50%;
+}
+footer {
+  margin-top: 20px;
+}
